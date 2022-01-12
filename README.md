@@ -1,2 +1,2 @@
-# -armenia-sprinter-admin
+# armenia-sprinter-admin
 Админка
