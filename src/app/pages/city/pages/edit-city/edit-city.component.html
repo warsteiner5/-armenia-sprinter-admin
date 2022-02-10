@@ -1,0 +1,24 @@
+<div fxLayout="column">
+  <div fxLayout
+       fxFlex="50% 50%"
+       fxLayoutAlign="default baseline"
+       class="form-field">
+    <div fxFlex="10%">ID</div>
+    <div fxFlex="35%">
+      <input type="text" pInputText [(ngModel)]="city._id" disabled />
+    </div>
+  </div>
+  <div fxLayout
+       fxLayoutAlign="default baseline"
+       class="form-field">
+    <div fxFlex="10%">Город</div>
+    <div fxFlex="35%">
+      <input type="text" pInputText [(ngModel)]="city.name"/>
+    </div>
+  </div>
+  <div fxFlex="45%"
+
+       fxLayoutAlign="end">
+    <button pButton pRipple type="button" class="p-button-success" label="Сохранить" (click)="submit()"></button>
+  </div>
+</div>

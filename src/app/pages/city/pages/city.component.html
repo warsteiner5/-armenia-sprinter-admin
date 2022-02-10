@@ -1,0 +1,27 @@
+<div>
+  <h2>Города</h2>
+  <nav>
+    <button pButton
+            pRipple
+            type="button"
+            class="p-button-success"
+            label="Создать запись"
+            icon="pi pi-plus"
+            (click)="addCity()">
+    </button>
+  </nav>
+
+  <div fxLayout class="table-header">
+    <div fxFlex="25%">ID</div>
+    <div fxFlex="65%">Наименование</div>
+    <div fxFlex="10%">Действия</div>
+  </div>
+  <div *ngFor="let city of cityList$ | async" class="table-row">
+    <div fxFlex="25%">{{ city._id }}</div>
+    <div fxFlex="65%">{{ city.name }}</div>
+    <div fxFlex="10%" class="table-row--action">
+      <p-button icon="pi pi-pencil" (onClick)="editCity(city)"></p-button>
+      <p-button icon="pi pi-trash" (onClick)="removeCity(city._id)"></p-button></div>
+  </div>
+</div>
+

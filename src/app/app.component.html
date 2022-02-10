@@ -1,8 +1,10 @@
-<app-header></app-header>
-<article  fxLayout="column">
-  <app-aside></app-aside>
-  <div class="content">
-    <router-outlet></router-outlet>
+<div fxLayout
+     fxLayoutAlign="center"
+     class="main-wrapper" >
+  <app-aside fxFlex="20%"></app-aside>
+  <div fxFlex="60%">
+      <router-outlet></router-outlet>
   </div>
-</article>
-<app-footer></app-footer>
+</div>
+
+

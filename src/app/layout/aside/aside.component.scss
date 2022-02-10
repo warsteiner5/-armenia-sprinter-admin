@@ -1,0 +1,10 @@
+.aside-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 200px;
+
+  .aside-item {
+    margin: 5px 0;
+  }
+}

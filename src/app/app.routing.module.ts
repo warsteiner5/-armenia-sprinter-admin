@@ -8,16 +8,21 @@ export const appRoutes: Routes = [
     data: { title: 'Трансфер' },
   },
   {
+    path: 'cities',
+    loadChildren: () => import('./pages/city/city.module').then((m) => m.CityModule),
+    data: { title: 'Города' },
+  },
+  {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'transfer',
+    redirectTo: 'cities',
   },
 ];
 
 
 export const routingConfiguration: ExtraOptions = {
   paramsInheritanceStrategy: 'always',
-  enableTracing: true,
+  enableTracing: false,
   onSameUrlNavigation: 'reload',
 };
 
